@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplos de Arrays em PHP</title>
+  <link rel="stylesheet" href="css/style_exemplo.css">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Arrays em PHP</a></h1>
+
+    <h2>Exemplos de Formulários</h2>
+
+    <nav>
+      <a href="pesquisa.html">Ir para a Pesquisa</a>
+      <a href="sobre.html">Sobre os Desenvolvedores</a>
+    </nav>
+  </header>
+  <main class="conteudo">
+
+    <div class="instrucao">
+      <p><strong>Escolha um dos formulários de cada vez para responder.</strong></p>
+    </div>
+
+    <div class = "formularios">
+    <section>
+      <h2>1️⃣ Array Indexado</h2>
+      <p>Informe três <strong>nomes de frutas</strong>:</p>
+      <form action="exemplo.php" method="post">
+        <input type="hidden" name="tipo" value="indexado">
+        <label for="fruta1">Fruta 1:</label>
+        <input type="text" id="fruta1" name="frutas[]" required>
+
+        <label for="fruta2">Fruta 2:</label>
+        <input type="text" id="fruta2" name="frutas[]" required>
+
+        <label for="fruta3">Fruta 3:</label>
+        <input type="text" id="fruta3" name="frutas[]" required>
+
+        <button type="submit">Enviar Frutas</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>2️⃣ Array Associativo</h2>
+      <p>Informe os <strong>dados de um produto</strong>:</p>
+      <form action="exemplo.php" method="post">
+        <input type="hidden" name="tipo" value="associativo">
+        <label for="nome">Nome do produto:</label>
+        <input type="text" id="nome" name="produto[nome]" required>
+
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco" name="produto[preco]" required>
+
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" name="produto[categoria]" required>
+
+        <button type="submit">Enviar Produto</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>3️⃣ Array Multidimensional</h2>
+      <p>Informe <strong>dois alunos</strong> com nota e turma:</p>
+      <form action="exemplo.php" method="post">
+        <input type="hidden" name="tipo" value="multidimensional">
+
+        <h3>Aluno 1</h3>
+        <label for="a1_nome">Nome:</label>
+        <input type="text" id="a1_nome" name="alunos[0][nome]" required>
+        <label for="a1_nota">Nota:</label>
+        <input type="text" id="a1_nota" name="alunos[0][nota]" required>
+        <label for="a1_turma">Turma:</label>
+        <input type="text" id="a1_turma" name="alunos[0][turma]" required>
+
+        <h3>Aluno 2</h3>
+        <label for="a2_nome">Nome:</label>
+        <input type="text" id="a2_nome" name="alunos[1][nome]" required>
+        <label for="a2_nota">Nota:</label>
+        <input type="text" id="a2_nota" name="alunos[1][nota]" required>
+        <label for="a2_turma">Turma:</label>
+        <input type="text" id="a2_turma" name="alunos[1][turma]" required>
+
+        <button type="submit">Enviar Alunos</button>
+      </form>
+    </section>
+  </div>
+
+  </main>
+  <footer>
+    <p>&copy; 2025 Nicolas e Isaac - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
